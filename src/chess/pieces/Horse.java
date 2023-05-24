@@ -13,7 +13,7 @@ public class Horse extends ChessPiece{
 	@Override
 	
 	public String toString() {
-		return "H";
+		return "C";
 	}
 
 	@Override
