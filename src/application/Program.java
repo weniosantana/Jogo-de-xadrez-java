@@ -44,6 +44,17 @@ public class Program {
 				captured.add(capturedPiece);
 			}
 			
+			if(chessmatch.getPromoted() != null) {
+				System.out.print("Escolha a sua promocao (B/C/T/r)");
+				String type = sc.nextLine();
+				while(!type.equals("B") && !type.equals("C") && !type.equals("T") && !type.equals("r")) {
+					System.out.print("Invalido! Escolha a sua promocao (B/C/T/r)");
+					type = sc.nextLine();
+				}
+				
+				chessmatch.replacePromotedPiece(type);
+			}
+			
 		}
 		catch(ChessException e) {
 			System.out.println(e.getMessage());
